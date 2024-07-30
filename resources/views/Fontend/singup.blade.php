@@ -22,7 +22,7 @@
             <form action="login" method="post">
                 <input type="text" name="fullname" placeholder="Enter Your Name" class="form-control mb-3">
                 <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-3">
-                <input type="text" name="name" placeholder="Username" class="form-control mb-3">
+                <input type="text" name="username" placeholder="Username" class="form-control mb-3">
                 <input type="password" name="Password" placeholder="Password" class="form-control mb-3">
                 <button class="btn btn-primary w-100">submit</button>
             </form>
