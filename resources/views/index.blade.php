@@ -29,7 +29,9 @@
     <!-- video slow motion add -->
       <script>
         // Set the playback rate to slow motion
-        document.getElementById('background-video').playbackRate = 0.45;
+       var bgVideo = document.getElementById('background-video');
+                    bgVideo.playbackRate = 0.45;
+                    bgVideo.controlsList="nodownload";
     </script>
 </body>
 </html>
