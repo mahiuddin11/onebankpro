@@ -21,6 +21,7 @@
                 <input type="password" name="Password" placeholder="Password" class="form-control mb-3">
                 <button class="btn btn-primary w-100">Login</button>
             </form>
+            <p>Don't have an account? <span><a href="{{ route('signup') }}" class=" text-warning">create account</a></span></p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
