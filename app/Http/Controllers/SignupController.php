@@ -9,6 +9,7 @@ class SignupController extends Controller
 {
     //index login page show
     public function loginPageShow(){
+      
         return view('index');
     }
 
@@ -31,6 +32,24 @@ class SignupController extends Controller
 
     }
     
+  public function log_in(Request $request){
 
+    // dd($request->all());
+    
+    $username = $request->name;
+    $password = $request->Password;
+   
+    // data load form database 
+
+  $user =  Signup::where('Username',$username)->where('Password',$password)->first();
+   
+  if($user){
+    dd('ok');
+  }else{
+    dd('not ok');
+  }
+
+    
+  }
     //last
 }

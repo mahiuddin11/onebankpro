@@ -19,3 +19,4 @@ Route::get('/signup', [SignupController::class, 'signUp_pageShow'])->name('signu
 
 
 Route::post('/store', [SignupController::class, 'store'])->name('store');
+Route::post('/log-in', [SignupController::class, 'log_in'])->name('log-in');
