@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('login');
+Route::get('/', [SignupController::class, 'loginPageShow'])->name('login');
+Route::get('/signup', [SignupController::class, 'signUp_pageShow'])->name('signup');
 
-Route::get('signup',function(){
-    return view('Fontend.singup');
-})->name('signup');
+
+Route::post('/store', [SignupController::class, 'store'])->name('store');

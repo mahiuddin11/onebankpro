@@ -19,14 +19,17 @@
         <h1 class="text-center mb-4 heading">Welcome to <span class="text-warning">One Bank</span></h1>
         <div class="login-form-area">
             <h4 class="text-center pb-3 login-text">SignUp</h4>
-            <form action="login" method="post">
+
+            <form action="{{ route('store') }}" method="post">
+                @csrf
                 <input type="text" name="fullname" placeholder="Enter Your Name" class="form-control mb-3">
                 <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-3">
                 <input type="text" name="username" placeholder="Username" class="form-control mb-3">
                 <input type="password" name="Password" placeholder="Password" class="form-control mb-3">
-                <button class="btn btn-primary w-100">submit</button>
+                <input type="submit" class="btn btn-primary w-100"></input>
             </form>
-            <p class=" text-white ">Alrady have an account? <span ><a class=" text-warning" href="{{ route('login')}}">login</a></span></p>
+            <p class=" text-white ">Alrady have an account? <span><a class=" text-warning"
+                        href="{{ route('login') }}">login</a></span></p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
