@@ -36,15 +36,17 @@ class SignupController extends Controller
 
     // dd($request->all());
     
-    $username = $request->name;
+    $username = $request->username;
     $password = $request->Password;
    
     // data load form database 
 
-  $user =  Signup::where('Username',$username)->where('Password',$password)->first();
+  
+
+  $user =  Signup::where('username',$username)->where('Password',$password)->first();
    
   if($user){
-    dd('ok');
+    dd($user);
   }else{
     dd('not ok');
   }
